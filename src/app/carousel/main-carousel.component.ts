@@ -21,6 +21,10 @@ export class MainCarouselComponent implements OnInit {
   // current slide's index
   private slideIndex = 1;
 
+  // will store the value of the interval for the auto sliding event
+  // we'll use this to clear the interval when we want to cancel the auto sliding event
+  private $interval;
+
   constructor(private apiService: ApiService) {
   }
 
@@ -29,7 +33,12 @@ export class MainCarouselComponent implements OnInit {
       (slides) => {
         // We fill our slides array with the data retrieved
         this.slides = slides;
+
+        // Initializes the slide
         this.showSlides(this.slideIndex);
+
+        // starts the auto slide event
+        this.autoSlide();
       },
       (err) => {
         console.error(err);
@@ -38,6 +47,24 @@ export class MainCarouselComponent implements OnInit {
       }
     );
 
+  }
+
+  // Automatic sliding functionality
+  autoSlide() {
+    this.$interval = setInterval(
+      () => {
+        // triggers the change event
+        this.changeSlide(1);
+        // calls itself because inside `changeSlide()` we are stopping the auto sliding
+        this.autoSlide();
+      }, 4500);
+  }
+
+  // Stops the automatic sliding effect
+  stopAutoSlide() {
+    if (this.$interval) {
+      clearInterval(this.$interval);
+    }
   }
 
   // gets the text of the current slide
@@ -53,7 +80,11 @@ export class MainCarouselComponent implements OnInit {
 
   // triggers the `showSlides()` method passing as parameter the index of the slide that we want to show
   changeSlide(n) {
+    // We stop the auto sliding. When the user clicks means he wants to 'gain control' of the view
+    this.stopAutoSlide();
+    // triggers the slide event
     this.showSlides(this.slideIndex += n);
+    // gets the current slide's caption text
     this.getCaptionTxt();
   }
 
