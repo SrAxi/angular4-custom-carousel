@@ -1,0 +1,38 @@
+<!-- Portfolio Item Heading -->
+<h1 class="my-4">JS Carousel
+</h1>
+
+<!-- Main Carousel -->
+<div class="row">
+
+  <div class="col-md-12 main-carousel">
+    <div *ngIf="!apiError.error; else errorDisplay">
+      <div class="mySlides" *ngFor="let slide of slides; let i = index" [attr.data-index]="i"
+           [ngStyle]="{'display': slide.show ? 'block' : 'none' }">
+        <div class="numbertext">{{i + 1}} / {{slides.length}}</div>
+        <img class="img-fluid" src="../../assets/img/{{slide.file}}" style="width:100%">
+      </div>
+
+      <a class="prev" (click)="changeSlide(-1)">❮</a>
+      <a class="next" (click)="changeSlide(1)">❯</a>
+
+      <div class="caption-container">
+        <p id="caption">{{captionTxt}}</p>
+      </div>
+    </div>
+  </div>
+  <ng-template #errorDisplay>
+    <div class="container">
+      <h4 class="card-title">{{apiError.msg}}
+      </h4>
+      <div class="card-block h-100">
+        <p>An error occurred while trying to retrieve the data! We are sorry...</p>
+        <p>Please try again, if the error persists contact technical support at
+          <a href="mailto:riccardo.polacci@sytac.io?subject=API call error (slide's data)">riccardo.polacci@sytac.io</a>
+        </p>
+      </div>
+    </div>
+  </ng-template>
+
+</div>
+<!-- /.row -->

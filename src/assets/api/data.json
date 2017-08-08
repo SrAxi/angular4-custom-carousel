@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "type": "main",
+    "file": "home1.jpg",
+    "txt": "Travel with us!"
+  },
+  {
+    "id": 2,
+    "type": "main",
+    "file": "home2.jpg",
+    "txt": "Best destinations ever!"
+  },
+  {
+    "id": 3,
+    "type": "main",
+    "file": "home3.jpg",
+    "txt": "Your best vacations with KLM"
+  },
+  {
+    "id": 4,
+    "type": "main",
+    "file": "home4.jpg",
+    "txt": "Incredible experiences at the best costs"
+  }
+]
