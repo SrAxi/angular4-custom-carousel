@@ -4,17 +4,26 @@
 
 <!-- Main Carousel -->
 <div class="row">
-
   <div class="col-md-12 main-carousel">
     <div *ngIf="!apiError.error; else errorDisplay">
       <div class="mySlides" *ngFor="let slide of slides; let i = index" [attr.data-index]="i"
            [ngStyle]="{'display': slide.show ? 'block' : 'none' }">
-        <div class="numbertext">{{i + 1}} / {{slides.length}}</div>
+        <!--Alternative way for viewing currentSlide / totalSlides-->
+        <!--<div class="numbertext">{{i + 1}} / {{slides.length}}</div>-->
         <img class="img-fluid" src="../../assets/img/{{slide.file}}" style="width:100%">
       </div>
 
       <a class="prev" (click)="changeSlide(-1)">❮</a>
       <a class="next" (click)="changeSlide(1)">❯</a>
+
+      <div class="bullets-container">
+        <ol class="bullets">
+          <li *ngFor="let slide of slides; let i = index" [ngClass]="{'active': slideIndex === (i + 1)}">
+            <span class="bullet hidden-xs-down" (click)="bulletClick(i)"></span>
+            <span class="bullet hidden-sm-up"></span>
+          </li>
+        </ol>
+      </div>
 
       <div class="caption-container">
         <p id="caption">{{captionTxt}}</p>

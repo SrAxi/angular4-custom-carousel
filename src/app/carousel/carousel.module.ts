@@ -2,12 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { MainCarouselComponent } from './main-carousel.component';
+import { SecondaryCarouselComponent } from './secondary-carousel.component';
 
 @NgModule({
   declarations: [
-    MainCarouselComponent
+    MainCarouselComponent,
+    SecondaryCarouselComponent
   ],
-  exports: [MainCarouselComponent],
+  exports: [
+    MainCarouselComponent,
+    SecondaryCarouselComponent
+  ],
   imports: [
     BrowserModule
   ],

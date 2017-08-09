@@ -41,12 +41,16 @@ export class MainCarouselComponent implements OnInit {
         this.autoSlide();
       },
       (err) => {
-        console.error(err);
         this.apiError.error = true;
         this.apiError.msg = err;
       }
     );
+  }
 
+  // handles bullet click event and assigns our current `slideIndex` the value of the clicked bullet
+  bulletClick(index) {
+    this.slideIndex = index;
+    this.changeSlide(1);
   }
 
   // Automatic sliding functionality
@@ -84,8 +88,6 @@ export class MainCarouselComponent implements OnInit {
     this.stopAutoSlide();
     // triggers the slide event
     this.showSlides(this.slideIndex += n);
-    // gets the current slide's caption text
-    this.getCaptionTxt();
   }
 
   // Shows and hides a slide according to the parameter passed.

@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "type": "main",
+    "file": "dest1.png"
+  },
+  {
+    "id": 2,
+    "type": "main",
+    "file": "dest2.png"
+  },
+  {
+    "id": 3,
+    "type": "main",
+    "file": "dest3.png"
+  },
+  {
+    "id": 4,
+    "type": "main",
+    "file": "dest4.png"
+  },
+  {
+    "id": 5,
+    "type": "vertical",
+    "file": "vertical1.jpg"
+  },
+  {
+    "id": 6,
+    "type": "vertical",
+    "file": "vertical2.jpg"
+  },
+  {
+    "id": 7,
+    "type": "vertical",
+    "file": "vertical3.jpg"
+  },
+  {
+    "id": 8,
+    "type": "vertical",
+    "file": "vertical4.jpg"
+  },
+  {
+    "id": 9,
+    "type": "vertical",
+    "file": "vertical5.jpg"
+  }
+]

@@ -1,0 +1,29 @@
+<!-- Related Projects Row -->
+<h1 class="my-4">CSS Carousel</h1>
+
+<div class="row">
+  <div class="css-carousel-main">
+    <div *ngIf="!apiError.error; else errorDisplay">
+      <div class="css-carousel-container slide">
+        <a href="#" *ngFor="let slide of slides"
+           [ngClass]="(slide.type=='vertical') ? 'hidden-sm-up vertical-slide' : 'hidden-xs-down'">
+          <img class="img-fluid" src="../../assets/img/{{slide.file}}" alt="">
+        </a>
+      </div>
+    </div>
+    <ng-template #errorDisplay>
+      <div class="container">
+        <h4 class="card-title">{{apiError.msg}}
+        </h4>
+        <div class="card-block h-100">
+          <p>An error occurred while trying to retrieve the data! We are sorry...</p>
+          <p>Please try again, if the error persists contact technical support at
+            <a
+              href="mailto:riccardo.polacci@sytac.io?subject=API call error (css slide's data)">riccardo.polacci@sytac.io</a>
+          </p>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</div>
+<!-- /.row -->
