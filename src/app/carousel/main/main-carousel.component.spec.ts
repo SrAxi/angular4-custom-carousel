@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
 import { MainCarouselComponent } from './main-carousel.component';
-import { ApiService } from '../shared/api/api.service';
+import { ApiService } from '../../shared/api/api.service';
 
 describe('MainCarouselComponent', () => {
   beforeEach(async(() => {

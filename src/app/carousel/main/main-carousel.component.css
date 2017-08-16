@@ -1,0 +1,116 @@
+/*
+MAIN CAROUSEL - JS
+*/
+.main-carousel {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0 !important;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.mySlides {
+  display: none;
+}
+
+/* Next & prev buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white !important;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next" arrow to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover add a black background */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Slides number */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/*Caption's container*/
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+/*Bullet's container*/
+.bullets-container {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 4%;
+  right: 20px;
+}
+
+.bullets {
+  list-style: none;
+  text-align: center;
+  z-index: 10;
+  padding: 0;
+  margin: 0;
+}
+
+.bullets li {
+  display: inline-block;
+}
+
+.bullets li span.bullet {
+  display: block;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 3px;
+}
+
+.bullets li.active span.bullet {
+  background-color: #00a1de;
+}
+
+@media (min-width: 768px) {
+  .bullets li span.bullet {
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+
+  .bullets li span.bullet:hover {
+    background-color: grey;
+  }
+}
+
+@media (max-width: 767px) {
+  .bullets-container {
+    left: 20px;
+    bottom: 2%;
+  }
+}

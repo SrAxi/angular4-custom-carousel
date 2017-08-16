@@ -1,0 +1,110 @@
+/*
+SECONDARY CAROUSEL - CSS
+*/
+
+.css-carousel-main {
+  width: 625px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: solid 1px white;
+}
+
+.css-carousel-container {
+  width: 2500px;
+  font-size: 0;
+  transition: 1s ease;
+  height: 225px;
+}
+
+.css-carousel-container:hover {
+  animation-play-state: paused;
+}
+
+.css-carousel-container a img {
+  width: 625px;
+  height: auto;
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+}
+
+.css-carousel-container a.vertical-slide img {
+  width: 320px;
+  height: auto;
+}
+
+.slide {
+  animation: slide 24s ease infinite;
+}
+
+/*All devices except for Mobile*/
+@media (min-width: 321px) {
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+
+    12.5% {
+      transform: translateX(0%);
+    }
+
+    25% {
+      transform: translateX(-25%);
+    }
+
+    37.5% {
+      transform: translateX(-25%);
+    }
+
+    50% {
+      transform: translateX(-50%);
+    }
+
+    62.5% {
+      transform: translateX(-50%);
+    }
+
+    75% {
+      transform: translateX(-75%);
+    }
+
+    87.5% {
+      transform: translateX(-75%);
+    }
+
+    99% {
+      transform: translateX(-75%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+/*Mobile adaptation of the animation*/
+@media (max-width: 320px) {
+  .css-carousel-main {
+    width: 320px;
+    height: 400px;
+  }
+
+  @keyframes slide {
+    0%, 20% {
+      transform: translateX(0);
+    }
+    25%, 45% {
+      transform: translateX(-320px);
+    }
+    50%, 70% {
+      transform: translateX(-640px);
+    }
+    75%, 90% {
+      transform: translateX(-960px);
+    }
+    95%, 100% {
+      transform: translateX(-1280px);
+    }
+  }
+}

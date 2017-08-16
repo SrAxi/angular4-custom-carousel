@@ -2,7 +2,7 @@ import { async, TestBed } from '@angular/core/testing';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
-import { ApiService } from '../shared/api/api.service';
+import { ApiService } from '../../shared/api/api.service';
 import { SecondaryCarouselComponent } from './secondary-carousel.component';
 
 describe('SecondaryCarouselComponent', () => {

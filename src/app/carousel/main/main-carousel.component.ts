@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../shared/api/api.service';
+import { ApiService } from '../../shared/api/api.service';
 
 @Component({
   selector: 'app-main-carousel',
-  templateUrl: './main-carousel.component.html'
+  templateUrl: './main-carousel.component.html',
+  styleUrls: ['./main-carousel.component.css']
 })
 export class MainCarouselComponent implements OnInit {
   // slides array to fill the carousel
