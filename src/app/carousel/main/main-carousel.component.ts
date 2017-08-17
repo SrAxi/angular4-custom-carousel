@@ -74,7 +74,7 @@ export class MainCarouselComponent implements OnInit {
 
   // gets the text of the current slide
   getCaptionTxt() {
-    this.slides.map(
+    this.slides.forEach(
       (slide) => {
         if (slide.show) {
           this.captionTxt = slide.txt;
@@ -106,7 +106,7 @@ export class MainCarouselComponent implements OnInit {
 
     // updates the `show` property of each slide, if the slide is the current selected we'll set it `true`
     // if is the first time that this method is running, it will add the `show` property to each slide's object
-    this.slides.map(
+    this.slides.forEach(
       (slide, i) => {
         slide.show = i === this.slideIndex - 1;
       }
