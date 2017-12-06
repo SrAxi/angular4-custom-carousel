@@ -15,8 +15,7 @@
     <div class="bullets-container">
       <ol class="bullets">
         <li *ngFor="let slide of slides; let i = index" [ngClass]="{'active': slideIndex === (i + 1)}">
-          <span class="bullet hidden-xs-down" (click)="bulletClick(i)"></span>
-          <span class="bullet hidden-sm-up"></span>
+          <span class="bullet" (click)="bulletClick(i)"></span>
         </li>
       </ol>
     </div>
