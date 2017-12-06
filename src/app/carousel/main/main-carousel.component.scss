@@ -12,6 +12,9 @@ MAIN CAROUSEL - JS
 
 .mySlides {
   display: none;
+  & img {
+    width: 100%;
+  }
 }
 
 /* Next & prev buttons */
@@ -30,18 +33,17 @@ MAIN CAROUSEL - JS
   border-radius: 0 3px 3px 0;
   user-select: none;
   -webkit-user-select: none;
+
+  /* On hover add a black background */
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
 }
 
 /* Position the "next" arrow to the right */
 .next {
-  right: 0;
+  right: 15px;
   border-radius: 3px 0 0 3px;
-}
-
-/* On hover add a black background */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Slides number */
@@ -68,6 +70,11 @@ MAIN CAROUSEL - JS
   position: absolute;
   bottom: 4%;
   right: 20px;
+
+  @media (max-width: 767px) {
+    left: 20px;
+    bottom: 2%;
+  }
 }
 
 .bullets {
@@ -76,41 +83,32 @@ MAIN CAROUSEL - JS
   z-index: 10;
   padding: 0;
   margin: 0;
-}
 
-.bullets li {
-  display: inline-block;
-}
+  & li {
+    display: inline-block;
 
-.bullets li span.bullet {
-  display: block;
-  width: 5px;
-  height: 5px;
-  background-color: #fff;
-  border-radius: 50%;
-  margin: 0 3px;
-}
+    & span.bullet {
+      display: block;
+      width: 5px;
+      height: 5px;
+      background-color: #fff;
+      border-radius: 50%;
+      margin: 0 3px;
 
-.bullets li.active span.bullet {
-  background-color: #00a1de;
-}
+      @media (min-width: 768px) {
+        width: 8px;
+        height: 8px;
+        cursor: pointer;
+        margin: 0 5px;
 
-@media (min-width: 768px) {
-  .bullets li span.bullet {
-    width: 8px;
-    height: 8px;
-    cursor: pointer;
-    margin: 0 5px;
-  }
+        &:hover {
+          background-color: grey;
+        }
+      }
+    }
 
-  .bullets li span.bullet:hover {
-    background-color: grey;
-  }
-}
-
-@media (max-width: 767px) {
-  .bullets-container {
-    left: 20px;
-    bottom: 2%;
+    &.active span.bullet {
+      background-color: #00a1de;
+    }
   }
 }

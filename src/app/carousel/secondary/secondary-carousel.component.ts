@@ -4,7 +4,7 @@ import { ApiService } from '../../shared/api/api.service';
 @Component({
   selector: 'app-secondary-carousel',
   templateUrl: './secondary-carousel.component.html',
-  styleUrls: ['./secondary-carousel.component.css']
+  styleUrls: ['./secondary-carousel.component.scss']
 })
 export class SecondaryCarouselComponent implements OnInit {
   // slides array to fill the carousel

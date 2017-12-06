@@ -6,7 +6,7 @@
          [ngStyle]="{'display': slide.show ? 'block' : 'none' }">
       <!--Alternative way for viewing currentSlide / totalSlides-->
       <!--<div class="numbertext">{{i + 1}} / {{slides.length}}</div>-->
-      <img class="img-fluid" src="../../assets/img/{{slide.file}}" style="width:100%">
+      <img class="img-fluid" src="../../assets/img/{{slide.file}}">
     </div>
 
     <a class="prev" (click)="changeSlide(-1)">❮</a>

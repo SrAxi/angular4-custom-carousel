@@ -4,7 +4,7 @@ import { ApiService } from '../../shared/api/api.service';
 @Component({
   selector: 'app-main-carousel',
   templateUrl: './main-carousel.component.html',
-  styleUrls: ['./main-carousel.component.css']
+  styleUrls: ['./main-carousel.component.scss']
 })
 export class MainCarouselComponent implements OnInit {
   // slides array to fill the carousel
@@ -74,13 +74,7 @@ export class MainCarouselComponent implements OnInit {
 
   // gets the text of the current slide
   getCaptionTxt() {
-    this.slides.forEach(
-      (slide) => {
-        if (slide.show) {
-          this.captionTxt = slide.txt;
-        }
-      }
-    );
+    this.captionTxt = this.slides.find(slide => slide.show && slide).txt;
   }
 
   // triggers the `showSlides()` method passing as parameter the index of the slide that we want to show

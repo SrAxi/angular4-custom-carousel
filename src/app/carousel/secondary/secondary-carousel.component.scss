@@ -14,23 +14,23 @@ SECONDARY CAROUSEL - CSS
   font-size: 0;
   transition: 1s ease;
   height: 225px;
-}
 
-.css-carousel-container:hover {
-  animation-play-state: paused;
-}
+  &:hover {
+    animation-play-state: paused;
+  }
 
-.css-carousel-container a img {
-  width: 625px;
-  height: auto;
-  display: inline-block;
-  font-size: 16px;
-  text-align: center;
-}
+  & a img {
+    width: 625px;
+    height: auto;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+  }
 
-.css-carousel-container a.vertical-slide img {
-  width: 320px;
-  height: auto;
+  & a.vertical-slide img {
+    width: 320px;
+    height: auto;
+  }
 }
 
 .slide {

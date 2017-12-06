@@ -16,7 +16,7 @@ export class Angular4CustomCarouselPage {
     if (n === 1) {
       return element(by.css('div.main-carousel div')).all(by.tagName('div.mySlides')).count();
     } else {
-      return element(by.css('div.css-carousel-main div div.css-carousel-container')).all(by.tagName('a')).count();
+      return element(by.css('div.css-carousel-main div.css-carousel-container')).all(by.tagName('a')).count();
     }
   }
 }
