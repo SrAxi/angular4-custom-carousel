@@ -1,0 +1,18 @@
+body {
+  padding-top: 54px;
+}
+
+footer {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+app-secondary-carousel {
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}

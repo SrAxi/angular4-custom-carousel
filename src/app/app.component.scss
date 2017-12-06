@@ -1,11 +1,3 @@
-body {
-  padding-top: 54px;
-
-  @media (min-width: 992px) {
-    padding-top: 56px;
-  }
-}
-
 /*Carousel*/
 .row > .column {
   padding: 0 8px;
@@ -20,13 +12,4 @@ body {
 .column {
   float: left;
   width: 25%;
-}
-
-footer {
-  margin-top: 20px;
-  margin-bottom: 0;
-}
-
-app-secondary-carousel {
-  margin: 0 auto;
 }
